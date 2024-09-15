@@ -41,7 +41,19 @@
                         <svg class="bd-placeholder-img" width="200" height="200" xmlns="http://www.w3.org/2000/svg" 
                             role="img" aria-label="Placeholder: Thumbnail" 
                                 preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <circle cx="100" cy="100" r="95" stroke="black" stroke-width="2" fill="lightblue" />
+                            <!-- Định nghĩa clip-path hình tròn -->
+                            <defs>
+                                <clipPath id="circleClip">
+                                    <circle cx="100" cy="100" r="95" />
+                                </clipPath>
+                            </defs>
+
+                            <!-- Áp dụng clip-path cho hình ảnh -->
+                            <image href="images/avatar.jpg" width="200" height="200" clip-path="url(#circleClip)"
+                                   preserveAspectRatio="xMidYMid slice" />
+
+                            <!-- Vẽ hình tròn viền -->
+                            <circle cx="100" cy="100" r="95" stroke="black" stroke-width="2" fill="none" />
                         </svg>
                     </div>
                         
