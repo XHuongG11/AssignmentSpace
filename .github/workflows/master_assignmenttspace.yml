@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy WAR app to Azure Web App - AssignmentSpace
+name: Build and deploy WAR app to Azure Web App - AssignmenttSpace
 
 on:
   push:
@@ -49,15 +49,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_BA74C845A5E74E23B4E9B177491D10E9 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9F59AE2DE8F7427981D630D0923759EC }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7E0254E38F4640CBBBE6EF1DB1131D2E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_ABE70683B3A14785BB1E49BB908FC88C }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CEFE2D4D4E1248F88415D8C151BF174F }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_71244C5531854D2EA59069380FFE8018 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'AssignmentSpace'
+          app-name: 'AssignmenttSpace'
           slot-name: 'Production'
           package: '*.war'
           
